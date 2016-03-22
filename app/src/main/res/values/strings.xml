@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Todos UNSa</string>
+    <string name="action_settings">Settings</string>
+    <string name="cardview_todounsa"> Lista Evolución </string>
+    <string name="cardview_unsa"> UNSa noticias </string>
+
+    <!-- actividad internet -->
+    <string name="conexion_titulo"> Sin Conexión a Internet </string>
+    <string name="conexion_boton"> Reintentar </string>
+
+    <!-- actividad presentacion -->
+    <string name="institucion"> Universidad Nacional de Salta </string>
+    <string name="facultad"> Ciencias Exactas </string>
+
+    <!-- actividad datos -->
+    <string name="cw_noti_cabecera"> cabecera </string>
+    <string name="cw_noti_titulo"> titulo </string>
+    <string name="cw_noti_publicado"> Pulicado </string>
+
+    <!-- creditos -->
+    <string name="creditos_version">versión 1.1</string>
+    <string name="creditos_equipo">Equipo de desarrollo:</string>
+    <string name="creditos_equipo_nombres"> Mesa de Ayuda de Ciencias Exactas </string>
+    <string name="creditos_fecha">versión 1.1 - 2016</string>
+    <string name="creditos_contacto">Contacto:</string>
+    <string name="creditos_contacto_mail">miguel@exa.unsa.edu.ar</string>
+    <string name="creditos_contacto_web">http://mev.unsa.edu.ar</string>
+    <string name="info"> A Cerca </string>
+
+</resources>

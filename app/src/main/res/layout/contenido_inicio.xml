@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="4dp"
+        card_view:cardBackgroundColor="@color/colorTeal"
+        card_view:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="@string/cardview_todounsa"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lista"
+                android:scaleType="center"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardBackgroundColor="@color/colorTeal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="@string/cardview_unsa"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logounsa"
+                android:scaleType="centerInside"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

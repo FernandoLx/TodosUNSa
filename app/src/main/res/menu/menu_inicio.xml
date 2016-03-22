@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ar.edu.unsa.exa.todosunsa.Inicio">
+    <item
+        android:id="@+id/informacion"
+        android:orderInCategory="100"
+        android:title="@string/info"
+        app:showAsAction="never" />
+</menu>
