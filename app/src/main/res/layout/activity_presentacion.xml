@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTeal">
+
+    <TextView
+        android:id="@+id/screen_desc"
+        android:text="@string/institucion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:gravity="center|center_horizontal"
+        android:layout_marginTop="101dp" />
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/screen_desc"
+        android:scaleType="centerInside"
+        android:src="@drawable/logounsa"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
+<!-- LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -17,17 +49,17 @@
         android:textSize="24sp"
         android:textColor="@android:color/white"
         android:gravity="center|center_horizontal"
-        android:text="@string/institucion" />
+        android:text=" " />
 
-    <TextView
+    < TextView
         android:id="@+id/screen_desc"
-        android:text="@string/facultad"
+        android:text="@string/institucion"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
-        android:textSize="22sp"
+        android:textSize="24sp"
         android:textColor="@android:color/white"
         android:gravity="center|center_horizontal"/>
 
@@ -53,4 +85,4 @@
 
     </RelativeLayout>
 
-</LinearLayout>
+</LinearLayout -->
