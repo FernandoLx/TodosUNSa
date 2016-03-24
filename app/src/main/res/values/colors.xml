@@ -6,4 +6,6 @@
     <color name="colorTeal">#01579b</color>
     <color name="colorGray">#757575</color>
     <color name="colorRed">#d50000</color>
+    <color name="colorGreen">#69f0ae</color>
+    <color name="colorOrange">#ffab91</color>
 </resources>

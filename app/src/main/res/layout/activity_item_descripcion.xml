@@ -33,7 +33,7 @@
                         android:layout_marginLeft="3dp"
                         android:layout_marginRight="3dp"
                         android:autoLink="web|email|phone"
-                        android:textColorLink="@color/colorRed"
+                        android:textColorLink="@color/colorGreen"
                         android:id="@+id/item_descripcion"
                         android:textColor="@android:color/white"
                         android:text="descripcion"

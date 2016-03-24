@@ -36,7 +36,7 @@ public class Notificaciones extends AppCompatActivity implements View.OnClickLis
     private int totalItemCount;
     //private int visibleItemCount;
     private int lastVisibleItem;
-    private boolean FIN;
+    private boolean BLOQUEO;
     private RecyclerView datos;
     private SwipeRefreshLayout srl;
     private NotificacionAdapter adapter;
@@ -57,7 +57,7 @@ public class Notificaciones extends AppCompatActivity implements View.OnClickLis
         this.EXAURL = getIntent().getStringExtra("EXAURL");
         this.TAMANO_PAGINA = 10;
         this.PAGINA = 0;
-        this.FIN = false;
+        this.BLOQUEO = true;
         adapter = null;
 
         ((ImageView)findViewById(R.id.imagen_appbar_notificacion)).setImageResource(IMAGEN_APPBAR);
@@ -86,15 +86,16 @@ public class Notificaciones extends AppCompatActivity implements View.OnClickLis
                     totalItemCount = linearLayoutManager.getItemCount();
                     //visibleItemCount = linearLayoutManager.getChildCount();
                     lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
-                    //Log.i("cargar"," total - ultimo " + totalItemCount +" "+ lastVisibleItem);
+                    Log.i("cargar"," total - ultimo " + totalItemCount +" "+ lastVisibleItem);
 
-                    if(!FIN && (totalItemCount < lastVisibleItem + 2))
+                    if(!BLOQUEO && (totalItemCount < lastVisibleItem + 2))
                     {
-                        //Log.i("cargar"," total - ultimo " + totalItemCount +" "+ lastVisibleItem);
+                        Log.i("cargar"," total - ultimo " + totalItemCount +" "+ lastVisibleItem);
+                        BLOQUEO = true;
                         PAGINA += TAMANO_PAGINA;
-                       //Log.i("PAGINA "," "+ PAGINA);
                         executeTask();
                     }
+                    Log.i("FIN"," "+BLOQUEO);
                 }
             }
         });
@@ -127,7 +128,7 @@ public class Notificaciones extends AppCompatActivity implements View.OnClickLis
         {
             adapter.clear();
         }
-        FIN = false;
+        BLOQUEO = true;
         this.PAGINA = 0;
         executeTask();
     }
@@ -178,15 +179,19 @@ public class Notificaciones extends AppCompatActivity implements View.OnClickLis
                     setScrollListener();
                     linearLayoutManager = (LinearLayoutManager)datos.getLayoutManager();
                 }
-                if (arrayList.size() < TAMANO_PAGINA)
+                if (arrayList.size() >= TAMANO_PAGINA)
                 {
-                    FIN = true;
+                    BLOQUEO = false;
+                }
+                else
+                {
+                    BLOQUEO = true;
                 }
             }
             else
             {
                 (Toast.makeText(getApplicationContext(), "No hay items", Toast.LENGTH_SHORT)).show();
-                FIN = true;
+                BLOQUEO = true;
             }
             srl.setRefreshing(false);
           }
